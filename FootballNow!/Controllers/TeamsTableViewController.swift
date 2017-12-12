@@ -9,11 +9,16 @@
 import UIKit
 
 class TeamsTableViewController: UITableViewController {
-
+  
+  var teams: [Team] = []
+  
+  
     override func viewDidLoad() {
         super.viewDidLoad()
       registerNibFiles()
       retrieveTeamsFromApi()
+      tableView.dataSource = self
+      tableView.delegate = self
 
     }
 
@@ -37,26 +42,31 @@ class TeamsTableViewController: UITableViewController {
       }
       
       guard let data = data else { return }
-      
-      let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
-      guard let teams = json["teams"] as? [[String:Any]] else { return }
-      
-      for team in teams {
-        print(team["name"] as Any)
-      }
-    
-      
       guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
         DispatchQueue.main.async {
           // Make UI error Change
         }
         return
       }
+      
+      let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
+      guard let jsonTeams = json["teams"] as? [[String:Any]] else { return }
+      for team in jsonTeams  {
+         do {
+           let team = try Team(json: team)
+            self.teams.append(team)
+        } catch let error {
+          print(error)
+        }
+      }
+      print(self.teams.count)
+      DispatchQueue.main.async {
+        self.tableView.reloadData()
+      }
     }
       task.resume()
   }
 
-  
   // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -64,13 +74,18 @@ class TeamsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return teams.count
     }
 
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TeamsCell", for: indexPath) as! TeamsTableViewCell
       cell.selectionStyle = .none
+      
+      cell.nameLabel.text = teams[indexPath.row].name
+      cell.codeLabel.text = teams[indexPath.row].code
+      cell.shortNameLabel.text = teams[indexPath.row].shortName
+      
 
       return cell
     }
