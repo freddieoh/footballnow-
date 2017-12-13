@@ -12,7 +12,6 @@ class TeamsTableViewController: UITableViewController {
   
   var teams: [Team] = []
   
-  
     override func viewDidLoad() {
         super.viewDidLoad()
       registerNibFiles()
@@ -84,8 +83,10 @@ class TeamsTableViewController: UITableViewController {
       
       cell.nameLabel.text = teams[indexPath.row].name
       cell.codeLabel.text = teams[indexPath.row].code
-      let crestURLS = teams[indexPath.row].shortName
+      cell.shortNameLabel.text = teams[indexPath.row].shortName
+      let crestUrls = teams[indexPath.row].crestUrl
       
+      cell.crestUrlImageView.sd_setImage(with: URL(string: crestUrls))
       
       return cell
     }

@@ -17,6 +17,8 @@
 		1FBCBF391FD5E9CB0000AD57 /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCBF371FD5E9CB0000AD57 /* TeamsTableViewCell.swift */; };
 		1FBCBF3A1FD5E9CB0000AD57 /* TeamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FBCBF381FD5E9CB0000AD57 /* TeamsTableViewCell.xib */; };
 		1FBCBF3C1FD5E9F60000AD57 /* TeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCBF3B1FD5E9F60000AD57 /* TeamsTableViewController.swift */; };
+		3DF59A8653DC6888CF7F70DF /* Pods_FootballNow_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE848B39DF81BFC2657DB374 /* Pods_FootballNow_Tests.framework */; };
+		90ACE31A2B0AA16EE4327819 /* Pods_FootballNow_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485412F6BF7E76CD3CADEB51 /* Pods_FootballNow_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,13 @@
 		1FBCBF371FD5E9CB0000AD57 /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
 		1FBCBF381FD5E9CB0000AD57 /* TeamsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsTableViewCell.xib; sourceTree = "<group>"; };
 		1FBCBF3B1FD5E9F60000AD57 /* TeamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewController.swift; sourceTree = "<group>"; };
+		1FF318A71FE1B201003C2C6D /* FootballNow!-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FootballNow!-Bridging-Header.h"; sourceTree = "<group>"; };
+		212A9EC1D3C678BB5085E768 /* Pods-FootballNow!Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballNow!Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootballNow!Tests/Pods-FootballNow!Tests.release.xcconfig"; sourceTree = "<group>"; };
+		485412F6BF7E76CD3CADEB51 /* Pods_FootballNow_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootballNow_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C62678C78C9DD6719E24ED7 /* Pods-FootballNow!Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballNow!Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootballNow!Tests/Pods-FootballNow!Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE848B39DF81BFC2657DB374 /* Pods_FootballNow_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootballNow_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB84599E80F3ACE8DC8BBAE5 /* Pods-FootballNow!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballNow!.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootballNow!/Pods-FootballNow!.release.xcconfig"; sourceTree = "<group>"; };
+		FC907EF4169F8A7DF954AAD8 /* Pods-FootballNow!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballNow!.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootballNow!/Pods-FootballNow!.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90ACE31A2B0AA16EE4327819 /* Pods_FootballNow_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF59A8653DC6888CF7F70DF /* Pods_FootballNow_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +81,9 @@
 				1FBCBF0E1FD5E3A20000AD57 /* FootballNow! */,
 				1FBCBF231FD5E3A30000AD57 /* FootballNow!Tests */,
 				1FBCBF0D1FD5E3A20000AD57 /* Products */,
+				AC7BBFC4C33D680505F87FE4 /* Pods */,
+				E2DB08259C0887769E674F1A /* Frameworks */,
+				1FF318A71FE1B201003C2C6D /* FootballNow!-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				1FBCBF311FD5E8E80000AD57 /* Model */,
-				1FBCBF2F1FD5E3D20000AD57 /* Team.swift */,
 				1FBCBF321FD5E8F50000AD57 /* View */,
 				1FBCBF331FD5E8FC0000AD57 /* Controller */,
 				1FBCBF341FD5E9190000AD57 /* Supporting Files */,
@@ -106,6 +119,7 @@
 		1FBCBF311FD5E8E80000AD57 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1FBCBF2F1FD5E3D20000AD57 /* Team.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,6 +154,26 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AC7BBFC4C33D680505F87FE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC907EF4169F8A7DF954AAD8 /* Pods-FootballNow!.debug.xcconfig */,
+				CB84599E80F3ACE8DC8BBAE5 /* Pods-FootballNow!.release.xcconfig */,
+				5C62678C78C9DD6719E24ED7 /* Pods-FootballNow!Tests.debug.xcconfig */,
+				212A9EC1D3C678BB5085E768 /* Pods-FootballNow!Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E2DB08259C0887769E674F1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				485412F6BF7E76CD3CADEB51 /* Pods_FootballNow_.framework */,
+				BE848B39DF81BFC2657DB374 /* Pods_FootballNow_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FBCBF291FD5E3A30000AD57 /* Build configuration list for PBXNativeTarget "FootballNow!" */;
 			buildPhases = (
+				EBD6B590A05BEE2E4D5D7310 /* [CP] Check Pods Manifest.lock */,
 				1FBCBF081FD5E3A20000AD57 /* Sources */,
 				1FBCBF091FD5E3A20000AD57 /* Frameworks */,
 				1FBCBF0A1FD5E3A20000AD57 /* Resources */,
+				1BE57A05E78C19371EA14287 /* [CP] Embed Pods Frameworks */,
+				AD59005F7EE9EB8BF683E9CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FBCBF2C1FD5E3A30000AD57 /* Build configuration list for PBXNativeTarget "FootballNow!Tests" */;
 			buildPhases = (
+				819D262ED562FB4EFC18F58E /* [CP] Check Pods Manifest.lock */,
 				1FBCBF1C1FD5E3A30000AD57 /* Sources */,
 				1FBCBF1D1FD5E3A30000AD57 /* Frameworks */,
 				1FBCBF1E1FD5E3A30000AD57 /* Resources */,
+				0AC41F1DA62D3AFCB27FAD0F /* [CP] Embed Pods Frameworks */,
+				4F6D7D60867CB7D2A2575BC6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +230,7 @@
 				TargetAttributes = {
 					1FBCBF0B1FD5E3A20000AD57 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					1FBCBF1F1FD5E3A30000AD57 = {
@@ -239,6 +280,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AC41F1DA62D3AFCB27FAD0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FootballNow!Tests/Pods-FootballNow!Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BE57A05E78C19371EA14287 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FootballNow!/Pods-FootballNow!-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F6D7D60867CB7D2A2575BC6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FootballNow!Tests/Pods-FootballNow!Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		819D262ED562FB4EFC18F58E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AD59005F7EE9EB8BF683E9CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FootballNow!/Pods-FootballNow!-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBD6B590A05BEE2E4D5D7310 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1FBCBF081FD5E3A20000AD57 /* Sources */ = {
@@ -399,14 +533,18 @@
 		};
 		1FBCBF2A1FD5E3A30000AD57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC907EF4169F8A7DF954AAD8 /* Pods-FootballNow!.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7E646DTM59;
 				INFOPLIST_FILE = "$(SRCROOT)/FootballNow!/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.geeoku.FootballNow-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FootballNow!-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -414,14 +552,17 @@
 		};
 		1FBCBF2B1FD5E3A30000AD57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB84599E80F3ACE8DC8BBAE5 /* Pods-FootballNow!.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7E646DTM59;
 				INFOPLIST_FILE = "$(SRCROOT)/FootballNow!/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.geeoku.FootballNow-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FootballNow!-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -429,6 +570,7 @@
 		};
 		1FBCBF2D1FD5E3A30000AD57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C62678C78C9DD6719E24ED7 /* Pods-FootballNow!Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -446,6 +588,7 @@
 		};
 		1FBCBF2E1FD5E3A30000AD57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 212A9EC1D3C678BB5085E768 /* Pods-FootballNow!Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
