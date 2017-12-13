@@ -88,7 +88,7 @@
 				1FBCBF311FD5E8E80000AD57 /* Model */,
 				1FBCBF2F1FD5E3D20000AD57 /* Team.swift */,
 				1FBCBF321FD5E8F50000AD57 /* View */,
-				1FBCBF331FD5E8FC0000AD57 /* Controllers */,
+				1FBCBF331FD5E8FC0000AD57 /* Controller */,
 				1FBCBF341FD5E9190000AD57 /* Supporting Files */,
 			);
 			path = "FootballNow!";
@@ -120,12 +120,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1FBCBF331FD5E8FC0000AD57 /* Controllers */ = {
+		1FBCBF331FD5E8FC0000AD57 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				1FBCBF3B1FD5E9F60000AD57 /* TeamsTableViewController.swift */,
 			);
-			path = Controllers;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		1FBCBF341FD5E9190000AD57 /* Supporting Files */ = {

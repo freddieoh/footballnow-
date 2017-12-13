@@ -84,9 +84,9 @@ class TeamsTableViewController: UITableViewController {
       
       cell.nameLabel.text = teams[indexPath.row].name
       cell.codeLabel.text = teams[indexPath.row].code
-      cell.shortNameLabel.text = teams[indexPath.row].shortName
+      let crestURLS = teams[indexPath.row].shortName
       
-
+      
       return cell
     }
   
