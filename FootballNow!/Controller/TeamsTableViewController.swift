@@ -7,21 +7,19 @@
 //
 
 import UIKit
+import WebKit
 
 class TeamsTableViewController: UITableViewController {
   
   var teams: [Team] = []
-  
+
     override func viewDidLoad() {
         super.viewDidLoad()
       registerNibFiles()
       retrieveTeamsFromApi()
-      tableView.dataSource = self
-      tableView.delegate = self
-
+      
     }
 
-  
   func registerNibFiles() {
     tableView.register(UINib(nibName: "TeamsTableViewCell", bundle: nil), forCellReuseIdentifier: "TeamsCell")
   }
@@ -55,17 +53,16 @@ class TeamsTableViewController: UITableViewController {
            let team = try Team(json: team)
             self.teams.append(team)
         } catch let error {
-          print(error)
+          print(error.localizedDescription)
         }
       }
-      print(self.teams.count)
       DispatchQueue.main.async {
         self.tableView.reloadData()
       }
     }
       task.resume()
   }
-
+  
   // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -76,24 +73,30 @@ class TeamsTableViewController: UITableViewController {
         return teams.count
     }
 
-  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TeamsCell", for: indexPath) as! TeamsTableViewCell
+      
+      
       cell.selectionStyle = .none
       
       cell.nameLabel.text = teams[indexPath.row].name
       cell.codeLabel.text = teams[indexPath.row].code
       cell.shortNameLabel.text = teams[indexPath.row].shortName
+    
       let crestUrls = teams[indexPath.row].crestUrl
-      
-      cell.crestUrlImageView.sd_setImage(with: URL(string: crestUrls))
-      
+      let crestWebView = cell.crestWebView
+      crestWebView?.scrollView.isScrollEnabled = false
+
+    
+      let crestURL = URL(string: crestUrls)
+      let request = URLRequest(url: crestURL!)
+      crestWebView?.load(request)
+
+
       return cell
     }
   
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-      return 220.5
+      return 292
     }
-
-
 }

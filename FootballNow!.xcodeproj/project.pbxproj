@@ -78,12 +78,12 @@
 		1FBCBF031FD5E3A20000AD57 = {
 			isa = PBXGroup;
 			children = (
+				1FF318A71FE1B201003C2C6D /* FootballNow!-Bridging-Header.h */,
 				1FBCBF0E1FD5E3A20000AD57 /* FootballNow! */,
 				1FBCBF231FD5E3A30000AD57 /* FootballNow!Tests */,
 				1FBCBF0D1FD5E3A20000AD57 /* Products */,
 				AC7BBFC4C33D680505F87FE4 /* Pods */,
 				E2DB08259C0887769E674F1A /* Frameworks */,
-				1FF318A71FE1B201003C2C6D /* FootballNow!-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
