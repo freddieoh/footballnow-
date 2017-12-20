@@ -15,6 +15,7 @@ class TeamsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      
       registerNibFiles()
       retrieveTeamsFromApi()
       createSegmentedControl()
@@ -26,7 +27,6 @@ class TeamsTableViewController: UITableViewController {
     leaguesSegmentedControl.selectedSegmentIndex = 0
     leaguesSegmentedControl.frame = CGRect(x: 50, y: 50, width: 50, height: 50)
     self.tableView.tableHeaderView = leaguesSegmentedControl
-
   }
 
   func registerNibFiles() {
@@ -85,22 +85,21 @@ class TeamsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TeamsCell", for: indexPath) as! TeamsTableViewCell
       
-      cell.layer.cornerRadius = cell.layer.frame.height / 2
-      //cell.selectionStyle = .none
+      cell.selectionStyle = .none
       
       cell.nameLabel.text = teams[indexPath.row].name
       cell.codeLabel.text = teams[indexPath.row].code
       cell.shortNameLabel.text = teams[indexPath.row].shortName
     
       
-        let crestUrls = self.teams[indexPath.row].crestUrl
-        let crestWebView = cell.crestWebView
+      let crestUrls = self.teams[indexPath.row].crestUrl
+      let crestWebView = cell.crestWebView
         
-        
-        let crestURL = URL(string: crestUrls)
-        let request = URLRequest(url: crestURL!)
-        crestWebView?.load(request)
-     
+      // MARK: Load WebView for Crest SVG Images
+      
+      let crestURL = URL(string: crestUrls)
+      let request = URLRequest(url: crestURL!)
+      crestWebView?.load(request)
 
       return cell
     }
