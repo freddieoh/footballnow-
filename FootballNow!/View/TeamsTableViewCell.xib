@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,50 +19,37 @@
                 <rect key="frame" x="0.0" y="0.0" width="542" height="291.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IL-dh-wnP">
-                        <rect key="frame" x="255" y="93" width="250" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IL-dh-wnP">
+                        <rect key="frame" x="255" y="93" width="119" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5n-lV-4lL">
-                        <rect key="frame" x="255" y="37" width="250" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5n-lV-4lL">
+                        <rect key="frame" x="255" y="37" width="287" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mah-sH-YLA">
+                    <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mah-sH-YLA">
                         <rect key="frame" x="6" y="28" width="241" height="212"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="241" id="JEu-tQ-DPj"/>
-                            <constraint firstAttribute="height" constant="212" id="WE2-qm-gYv"/>
-                        </constraints>
                         <wkWebViewConfiguration key="configuration">
                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                             <wkPreferences key="preferences"/>
                         </wkWebViewConfiguration>
                     </wkWebView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Short Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfo-fe-KGo">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Short Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfo-fe-KGo">
                         <rect key="frame" x="255" y="143" width="250" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <constraints>
-                    <constraint firstItem="L5n-lV-4lL" firstAttribute="trailing" secondItem="5IL-dh-wnP" secondAttribute="trailing" id="20c-7o-cJ7"/>
-                    <constraint firstItem="L5n-lV-4lL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="26" id="8MR-4R-7AF"/>
-                    <constraint firstItem="5IL-dh-wnP" firstAttribute="top" secondItem="L5n-lV-4lL" secondAttribute="bottom" constant="35" id="BI1-jP-UcB"/>
-                    <constraint firstItem="Mah-sH-YLA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-14" id="CGQ-bx-8Fc"/>
-                    <constraint firstItem="5IL-dh-wnP" firstAttribute="trailing" secondItem="Pfo-fe-KGo" secondAttribute="trailing" id="Ewc-XK-mYL"/>
-                    <constraint firstItem="5IL-dh-wnP" firstAttribute="leading" secondItem="Pfo-fe-KGo" secondAttribute="leading" id="F9m-Jf-9bk"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="L5n-lV-4lL" secondAttribute="trailing" constant="17" id="GZu-ag-nDX"/>
-                    <constraint firstItem="L5n-lV-4lL" firstAttribute="leading" secondItem="Mah-sH-YLA" secondAttribute="trailing" constant="8" symbolic="YES" id="P9w-t1-G4X"/>
-                    <constraint firstItem="Pfo-fe-KGo" firstAttribute="top" secondItem="5IL-dh-wnP" secondAttribute="bottom" constant="29" id="kzc-sM-T1f"/>
-                    <constraint firstItem="Mah-sH-YLA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="17" id="ore-wH-lgc"/>
-                    <constraint firstItem="L5n-lV-4lL" firstAttribute="leading" secondItem="5IL-dh-wnP" secondAttribute="leading" id="wJI-uT-LKM"/>
-                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
