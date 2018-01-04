@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1F470B021FFEA03100ED3650 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F470B011FFEA03100ED3650 /* Player.swift */; };
-		1F470B061FFEA3B900ED3650 /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F470B051FFEA3B900ED3650 /* PlayerTableViewCell.xib */; };
+		1FAD0A641FFEB222001274F5 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD0A621FFEB222001274F5 /* PlayerTableViewCell.swift */; };
+		1FAD0A651FFEB222001274F5 /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD0A631FFEB222001274F5 /* PlayerTableViewCell.xib */; };
 		1FBCBF101FD5E3A20000AD57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCBF0F1FD5E3A20000AD57 /* AppDelegate.swift */; };
 		1FBCBF151FD5E3A20000AD57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBCBF131FD5E3A20000AD57 /* Main.storyboard */; };
 		1FBCBF171FD5E3A20000AD57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FBCBF161FD5E3A20000AD57 /* Assets.xcassets */; };
@@ -35,7 +36,8 @@
 
 /* Begin PBXFileReference section */
 		1F470B011FFEA03100ED3650 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		1F470B051FFEA3B900ED3650 /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
+		1FAD0A621FFEB222001274F5 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		1FAD0A631FFEB222001274F5 /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
 		1FBCBF0C1FD5E3A20000AD57 /* FootballNow!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FootballNow!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBCBF0F1FD5E3A20000AD57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FBCBF141FD5E3A20000AD57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,7 +137,8 @@
 				1FBCBF371FD5E9CB0000AD57 /* TeamsTableViewCell.swift */,
 				1FBCBF381FD5E9CB0000AD57 /* TeamsTableViewCell.xib */,
 				1FBCBF131FD5E3A20000AD57 /* Main.storyboard */,
-				1F470B051FFEA3B900ED3650 /* PlayerTableViewCell.xib */,
+				1FAD0A621FFEB222001274F5 /* PlayerTableViewCell.swift */,
+				1FAD0A631FFEB222001274F5 /* PlayerTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,7 +275,7 @@
 			files = (
 				1FBCBF1A1FD5E3A20000AD57 /* LaunchScreen.storyboard in Resources */,
 				1FBCBF361FD5E93C0000AD57 /* Default-568h@2x.png in Resources */,
-				1F470B061FFEA3B900ED3650 /* PlayerTableViewCell.xib in Resources */,
+				1FAD0A651FFEB222001274F5 /* PlayerTableViewCell.xib in Resources */,
 				1FBCBF171FD5E3A20000AD57 /* Assets.xcassets in Resources */,
 				1FBCBF3A1FD5E9CB0000AD57 /* TeamsTableViewCell.xib in Resources */,
 				1FBCBF151FD5E3A20000AD57 /* Main.storyboard in Resources */,
@@ -386,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FAD0A641FFEB222001274F5 /* PlayerTableViewCell.swift in Sources */,
 				1FBCBF301FD5E3D20000AD57 /* Team.swift in Sources */,
 				1FBCBF101FD5E3A20000AD57 /* AppDelegate.swift in Sources */,
 				1FBCBF3C1FD5E9F60000AD57 /* TeamsTableViewController.swift in Sources */,
