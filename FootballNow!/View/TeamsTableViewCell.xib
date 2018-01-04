@@ -33,7 +33,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mah-sH-YLA">
+                    <wkWebView contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mah-sH-YLA">
                         <rect key="frame" x="6" y="28" width="241" height="212"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -58,7 +58,7 @@
                 <outlet property="nameLabel" destination="L5n-lV-4lL" id="tad-uT-fp1"/>
                 <outlet property="shortNameLabel" destination="Pfo-fe-KGo" id="gyv-az-kac"/>
             </connections>
-            <point key="canvasLocation" x="226" y="-120"/>
+            <point key="canvasLocation" x="155" y="-114"/>
         </tableViewCell>
     </objects>
 </document>

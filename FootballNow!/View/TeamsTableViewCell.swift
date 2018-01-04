@@ -23,15 +23,17 @@ class TeamsTableViewCell: UITableViewCell {
   override func awakeFromNib() {
         super.awakeFromNib()
    
-   // webViewDidFinishLoad(crestWebView)
+  // webViewDidFinishLoad(crestWebView)
     
     disableWebViewScroll()
+    
     
   }
   
   func webViewDidFinishLoad(_ webView: WKWebView!) {
-    crestWebView.frame.size.height = 150
-    crestWebView.frame.size = crestWebView.sizeThatFits(.zero)
+   // crestWebView.allows
+//    crestWebView.frame.size.height = 150
+//    crestWebView.frame.size = crestWebView.sizeThatFits(.zero)
     print("The size is being called")
   }
   

@@ -11,7 +11,7 @@ import UIKit
 class TeamsTableViewController: UITableViewController {
   
   var teams: [Team] = []
-  var leagues = ["PL", "La Liga", "Ligue 1"]
+  var footballTeamInformation = ["Premier League", "Fixtures", "League Table"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +20,14 @@ class TeamsTableViewController: UITableViewController {
       retrieveTeamsFromApi()
       createSegmentedControl()
 
+
     }
   
   func createSegmentedControl() {
-    let leaguesSegmentedControl = UISegmentedControl(items: leagues)
+    let leaguesSegmentedControl = UISegmentedControl(items: footballTeamInformation)
     leaguesSegmentedControl.selectedSegmentIndex = 0
     leaguesSegmentedControl.frame = CGRect(x: 50, y: 50, width: 50, height: 50)
+    leaguesSegmentedControl.backgroundColor = .purple
     self.tableView.tableHeaderView = leaguesSegmentedControl
   }
 
@@ -84,9 +86,7 @@ class TeamsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TeamsCell", for: indexPath) as! TeamsTableViewCell
-      
-      cell.selectionStyle = .none
-      
+            
       cell.nameLabel.text = teams[indexPath.row].name
       cell.codeLabel.text = teams[indexPath.row].code
       cell.shortNameLabel.text = teams[indexPath.row].shortName
