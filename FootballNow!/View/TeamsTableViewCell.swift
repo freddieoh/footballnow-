@@ -22,28 +22,14 @@ class TeamsTableViewCell: UITableViewCell {
   
   override func awakeFromNib() {
         super.awakeFromNib()
-   
-  // webViewDidFinishLoad(crestWebView)
     
     disableWebViewScroll()
-    
-    
   }
   
   func webViewDidFinishLoad(_ webView: WKWebView!) {
-   // crestWebView.allows
-//    crestWebView.frame.size.height = 150
-//    crestWebView.frame.size = crestWebView.sizeThatFits(.zero)
     print("The size is being called")
   }
   
   func setMagnification(_ magnification: CGFloat, centeredAt point: CGPoint) {
-    
   }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-    }
-
 }

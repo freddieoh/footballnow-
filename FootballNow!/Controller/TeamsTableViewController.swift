@@ -20,7 +20,6 @@ class TeamsTableViewController: UITableViewController {
       retrieveTeamsFromApi()
       createSegmentedControl()
 
-
     }
   
   func createSegmentedControl() {
@@ -107,6 +106,4 @@ class TeamsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
       return 292
     }
-
 }
-

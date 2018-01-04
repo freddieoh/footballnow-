@@ -48,5 +48,4 @@ extension Team {
     self.crestUrl = crestUrl
     
   }
-  
 }
