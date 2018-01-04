@@ -17,5 +17,5 @@ struct Player {
   let dateOfBirth: String
   let nationality: String
   
-  
+
 }
