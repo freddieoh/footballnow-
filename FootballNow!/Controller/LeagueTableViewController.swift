@@ -10,6 +10,7 @@ import UIKit
 
 class LeagueTableViewController: UITableViewController {
 
+  
     override func viewDidLoad() {
         super.viewDidLoad()
       registerNibFiles()
@@ -33,6 +34,8 @@ class LeagueTableViewController: UITableViewController {
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "LeagueCell", for: indexPath) as! LeagueTableViewCell
+      
+      
     
     return cell
   }
