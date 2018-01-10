@@ -567,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC907EF4169F8A7DF954AAD8 /* Pods-FootballNow!.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -586,6 +587,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CB84599E80F3ACE8DC8BBAE5 /* Pods-FootballNow!.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

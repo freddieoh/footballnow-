@@ -17,9 +17,7 @@ class PlayerTableViewCell: UITableViewCell {
   @IBOutlet weak var nationalityLabel: UILabel!
   @IBOutlet weak var contractUntilLabel: UILabel!
   
-  
   override func awakeFromNib() {
         super.awakeFromNib()
-
   }
 }

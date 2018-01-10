@@ -16,7 +16,7 @@ class TeamsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-      registerNibFiles()
+      registerTeamsTableViewCellNib()
       retrieveTeamsFromApi()
       createSegmentedControl()
 
@@ -30,7 +30,7 @@ class TeamsTableViewController: UITableViewController {
     self.tableView.tableHeaderView = leaguesSegmentedControl
   }
 
-  func registerNibFiles() {
+  func registerTeamsTableViewCellNib() {
     tableView.register(UINib(nibName: "TeamsTableViewCell", bundle: nil), forCellReuseIdentifier: "TeamsCell")
   }
   

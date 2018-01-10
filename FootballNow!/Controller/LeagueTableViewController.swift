@@ -7,21 +7,34 @@
 //
 
 import UIKit
+import Alamofire
 
 class LeagueTableViewController: UITableViewController {
 
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      registerNibFiles()
+      registerLeagueTableViewCellNib()
 
     }
   
-  func registerNibFiles() {
+    override func viewDidAppear(_ animated: Bool) {
+      super.viewDidAppear(animated)
+      fetchURL(url: "https://api.football-data.org/v1/competitions/445/leagueTable", param: ["standing":"links"])
+    }
+  
+    func registerLeagueTableViewCellNib() {
     tableView.register(UINib(nibName: "LeagueTableViewCell", bundle: nil), forCellReuseIdentifier: "LeagueCell")
-  }
-
-
+    }
+  
+  func fetchURL(url: String, param: [String:Any]) {
+    Alamofire.request(url, parameters: param).responseString { (response) in
+         print(response.value ?? "No Value")
+        }.responseJSON { (response) in
+          print(response.value ?? "No JSON Value")
+      }
+    }
+  
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
