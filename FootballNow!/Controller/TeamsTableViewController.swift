@@ -84,14 +84,20 @@ class TeamsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TeamsCell", for: indexPath) as! TeamsTableViewCell
+      
+      let cellIdentifier = "TeamsCell"
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TeamsTableViewCell  else {
+        fatalError("The dequeued cell is not an instance of TeamsCell.")
+      }
+      
+      let team = teams[indexPath.row]
             
-      cell.nameLabel.text = teams[indexPath.row].name
-      cell.codeLabel.text = teams[indexPath.row].code
-      cell.shortNameLabel.text = teams[indexPath.row].shortName
+      cell.nameLabel.text = team.name
+      cell.codeLabel.text = team.code
+      cell.shortNameLabel.text = team.shortName
     
       
-      let crestUrls = self.teams[indexPath.row].crestUrl
+      let crestUrls = team.crestUrl
       let crestWebView = cell.crestWebView
         
       // MARK: Load WebView for Crest SVG Images

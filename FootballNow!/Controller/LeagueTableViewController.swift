@@ -46,10 +46,12 @@ class LeagueTableViewController: UITableViewController {
     }
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "LeagueCell", for: indexPath) as! LeagueTableViewCell
-      
-      
     
+      let cellIdentifier = "LeagueCell"
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? LeagueTableViewCell  else {
+        fatalError("The dequeued cell is not an instance of TeamsCell.")
+      }
+
     return cell
   }
   
