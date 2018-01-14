@@ -32,8 +32,7 @@ class LeagueTableViewController: UITableViewController {
       Alamofire.request(url).responseData { (response) in
         guard let data = response.data else { return }
           do {
-            let decoder = JSONDecoder()
-            let table = try decoder.decode(LeagueTable.self, from: data)
+            let table = try LeagueTable.decode(data: data)
             let standings = table.standing
 
             for teams in standings {
@@ -82,3 +81,14 @@ class LeagueTableViewController: UITableViewController {
     }
 
 }
+
+//: Decodable Extension
+
+
+extension Decodable {
+  static func decode(data: Data) throws -> Self {
+    let decoder = JSONDecoder()
+    return try decoder.decode(Self.self, from: data)
+  }
+}
+
