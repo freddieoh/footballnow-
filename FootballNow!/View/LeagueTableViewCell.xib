@@ -152,8 +152,8 @@
                 <outlet property="lossesLabel" destination="I8o-oY-v0g" id="ZDv-Mm-PlK"/>
                 <outlet property="playedGamesLabel" destination="3ft-Dn-WI1" id="Sq0-uQ-tG5"/>
                 <outlet property="pointsLabel" destination="t9J-aD-Kqb" id="aCi-JY-1y9"/>
-                <outlet property="positionLabel" destination="bjg-G2-cad" id="xom-Mw-fTh"/>
-                <outlet property="teamNameLabel" destination="bjg-G2-cad" id="wNe-Vy-8uO"/>
+                <outlet property="positionLabel" destination="205-IJ-oMK" id="gJ9-a5-yqt"/>
+                <outlet property="teamNameLabel" destination="bjg-G2-cad" id="qQg-vF-Bgg"/>
                 <outlet property="winsLabel" destination="gVx-a6-AIh" id="tIB-Vm-9ey"/>
             </connections>
             <point key="canvasLocation" x="157.5" y="130.5"/>
