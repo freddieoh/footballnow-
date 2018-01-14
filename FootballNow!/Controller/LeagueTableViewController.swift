@@ -34,7 +34,6 @@ class LeagueTableViewController: UITableViewController {
           do {
             let table = try LeagueTable.decode(data: data)
             let standings = table.standing
-
             for teams in standings {
                 self.standings.append(teams)
               }
