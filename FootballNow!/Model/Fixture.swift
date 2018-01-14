@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Fixture {
+struct Fixture: Decodable {
   
   let date: String
   let homeTeamName: String

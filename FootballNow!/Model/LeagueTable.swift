@@ -29,3 +29,6 @@ struct Standing: Decodable {
   let losses: Int?
   
 }
+
+
+
