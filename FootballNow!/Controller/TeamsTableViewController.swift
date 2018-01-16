@@ -11,7 +11,8 @@ import UIKit
 class TeamsTableViewController: UITableViewController {
   
   var teams: [Team] = []
-  var footballTeamInformation = ["Premier League", "Fixtures", "League Table"]
+  let segmentedControl = UISegmentedControl()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +24,29 @@ class TeamsTableViewController: UITableViewController {
     }
   
   func createSegmentedControl() {
-    let leaguesSegmentedControl = UISegmentedControl(items: footballTeamInformation)
-    leaguesSegmentedControl.selectedSegmentIndex = 0
-    leaguesSegmentedControl.frame = CGRect(x: 50, y: 50, width: 50, height: 50)
-    leaguesSegmentedControl.backgroundColor = .purple
-    self.tableView.tableHeaderView = leaguesSegmentedControl
+    segmentedControl.insertSegment(withTitle: "Premier League",
+                                      at: 0,
+                                      animated: true)
+    segmentedControl.insertSegment(withTitle: "League Table",
+                                      at: 1,
+                                      animated: true)
+    segmentedControl.insertSegment(withTitle: "Fixtures",
+                                      at: 2,
+                                      animated: true)
+    segmentedControl.selectedSegmentIndex = 0
+    segmentedControl.frame = CGRect(x: 50, y: 50, width: 50, height: 50)
+    segmentedControl.backgroundColor = .red
+    
+    
+    self.tableView.tableHeaderView = segmentedControl
+  }
+  
+  func segment(sender : UISegmentedControl) {
+    if sender.selectedSegmentIndex == 0 {
+      print("segment 0 is selected")
+    } else if sender.selectedSegmentIndex == 1 {
+      print("segment 1 is selected")
+    }
   }
 
   func registerTeamsTableViewCellNib() {
