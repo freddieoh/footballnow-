@@ -36,10 +36,11 @@ class TeamsTableViewController: UITableViewController {
                                       animated: true)
       segmentedControl.selectedSegmentIndex = 0
       segmentedControl.frame = CGRect(x: 50, y: 50, width: 50, height: 50)
-      segmentedControl.backgroundColor = .red
+      segmentedControl.backgroundColor = .green
+      segmentedControl.tintColor = .purple
 
       segmentedControl.addTarget(self,
-                               action: #selector(segment(_:)),
+                            action: #selector(segment(_:)),
                                for: .valueChanged)
 
       self.tableView.tableHeaderView = segmentedControl
@@ -48,11 +49,16 @@ class TeamsTableViewController: UITableViewController {
   
 
     @objc func segment(_ action: UISegmentedControl) {
-    if action.selectedSegmentIndex == 0 {
-      print("segment 0 is selected")
-    } else if action.selectedSegmentIndex == 1 {
-      print("segment 1 is selected")
-    }
+      switch segmentedControl.selectedSegmentIndex {
+      case 0:
+        print("Segment 0 selected")
+      case 1:
+        print("Segment 1 Selected")
+      case 2:
+        print("Segment 2 selected")
+      default:
+        print("Default")
+      }
   }
   
   
