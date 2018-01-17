@@ -10,8 +10,8 @@ import UIKit
 
 class TeamsTableViewController: UITableViewController {
   
-  var teams: [Team] = []
-  let segmentedControl = UISegmentedControl()
+    var teams: [Team] = []
+    let segmentedControl = UISegmentedControl()
 
 
     override func viewDidLoad() {
@@ -23,34 +23,43 @@ class TeamsTableViewController: UITableViewController {
 
     }
   
-  func createSegmentedControl() {
-    segmentedControl.insertSegment(withTitle: "Premier League",
-                                      at: 0,
+   @objc func createSegmentedControl() {
+
+      segmentedControl.insertSegment(withTitle: "Premier League",
+                                            at: 0,
                                       animated: true)
-    segmentedControl.insertSegment(withTitle: "League Table",
-                                      at: 1,
+      segmentedControl.insertSegment(withTitle: "League Table",
+                                            at: 1,
                                       animated: true)
-    segmentedControl.insertSegment(withTitle: "Fixtures",
-                                      at: 2,
+      segmentedControl.insertSegment(withTitle: "Fixtures",
+                                            at: 2,
                                       animated: true)
-    segmentedControl.selectedSegmentIndex = 0
-    segmentedControl.frame = CGRect(x: 50, y: 50, width: 50, height: 50)
-    segmentedControl.backgroundColor = .red
-    
-    
-    self.tableView.tableHeaderView = segmentedControl
-  }
+      segmentedControl.selectedSegmentIndex = 0
+      segmentedControl.frame = CGRect(x: 50, y: 50, width: 50, height: 50)
+      segmentedControl.backgroundColor = .red
+
+      segmentedControl.addTarget(self,
+                               action: #selector(segment(_:)),
+                               for: .valueChanged)
+
+      self.tableView.tableHeaderView = segmentedControl
+    }
   
-  func segment(sender : UISegmentedControl) {
-    if sender.selectedSegmentIndex == 0 {
+  
+
+    @objc func segment(_ action: UISegmentedControl) {
+    if action.selectedSegmentIndex == 0 {
       print("segment 0 is selected")
-    } else if sender.selectedSegmentIndex == 1 {
+    } else if action.selectedSegmentIndex == 1 {
       print("segment 1 is selected")
     }
   }
-
+  
+  
   func registerTeamsTableViewCellNib() {
-    tableView.register(UINib(nibName: "TeamsTableViewCell", bundle: nil), forCellReuseIdentifier: "TeamsCell")
+    tableView.register(UINib(nibName: "TeamsTableViewCell",
+                              bundle: nil),
+              forCellReuseIdentifier: "TeamsCell")
   }
   
   
@@ -105,7 +114,7 @@ class TeamsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
       let cellIdentifier = "TeamsCell"
-      guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TeamsTableViewCell  else {
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TeamsTableViewCell else {
         fatalError("The dequeued cell is not an instance of TeamsCell.")
       }
       
@@ -127,7 +136,7 @@ class TeamsTableViewController: UITableViewController {
 
       return cell
     }
-  
+
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
       return 292
     }
