@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jvX-GR-yE3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rq8-zm-lRu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Teams Table View Controller-->
+        <!--Item-->
         <scene sceneID="Wdf-oe-kpx">
             <objects>
                 <tableViewController id="jvX-GR-yE3" customClass="TeamsTableViewController" customModule="FootballNow_" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,12 +32,13 @@
                             <outlet property="delegate" destination="jvX-GR-yE3" id="fJL-mv-dRy"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="sP2-Be-c19"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWu-DK-E9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="777" y="143"/>
+            <point key="canvasLocation" x="1303" y="-383"/>
         </scene>
-        <!--League Table View Controller-->
+        <!--Item-->
         <scene sceneID="p4R-9b-2s3">
             <objects>
                 <tableViewController id="l2M-M5-kod" customClass="LeagueTableViewController" customModule="FootballNow_" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,12 +61,13 @@
                             <outlet property="delegate" destination="l2M-M5-kod" id="ija-hp-SDy"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="Q9Y-Bx-QR0"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFG-mr-mVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1563" y="135"/>
+            <point key="canvasLocation" x="1302" y="344"/>
         </scene>
-        <!--Fixture Table View Controller-->
+        <!--Item-->
         <scene sceneID="yix-EJ-2Z6">
             <objects>
                 <tableViewController id="w29-GR-qf6" customClass="FixtureTableViewController" customModule="FootballNow_" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,10 +90,30 @@
                             <outlet property="delegate" destination="w29-GR-qf6" id="dO9-r5-Pmi"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="CME-hL-P7r"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aD-oz-VZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2626" y="159"/>
+            <point key="canvasLocation" x="1302" y="1075"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ber-gd-9hs">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rq8-zm-lRu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aX4-Dk-KKq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jvX-GR-yE3" kind="relationship" relationship="viewControllers" id="g9k-UI-AGG"/>
+                        <segue destination="l2M-M5-kod" kind="relationship" relationship="viewControllers" id="BBJ-GC-aDp"/>
+                        <segue destination="w29-GR-qf6" kind="relationship" relationship="viewControllers" id="sTU-1p-AMG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVo-bh-jkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476.80000000000001" y="142.1289355322339"/>
         </scene>
     </scenes>
 </document>

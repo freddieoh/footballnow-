@@ -25,11 +25,4 @@ class TeamsTableViewCell: UITableViewCell {
     
     disableWebViewScroll()
   }
-  
-  func webViewDidFinishLoad(_ webView: WKWebView!) {
-    print("The size is being called")
-  }
-  
-  func setMagnification(_ magnification: CGFloat, centeredAt point: CGPoint) {
-  }
 }
