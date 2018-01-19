@@ -11,6 +11,7 @@ import Alamofire
 class FixtureTableViewController: UITableViewController {
   
   var fixtures: [Fixture] = []
+  var results: [Result] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,12 +27,11 @@ class FixtureTableViewController: UITableViewController {
   
   func fetchURL(url: String) {
     Alamofire.request(url).responseData { (response) in
-      assert(Thread.isMainThread)
       guard let data = response.data else { return }
       do {
         let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
         let fixtureResponse = try decoder.decode(FixturesResponse.self, from: data)
-        print(fixtureResponse)
         self.fixtures = fixtureResponse.fixtures
       }
       catch {
@@ -61,7 +61,8 @@ class FixtureTableViewController: UITableViewController {
     let fixture = fixtures[indexPath.row]
     cell.homeTeamLabel.text = fixture.homeTeamName
     cell.awayTeamLabel.text = fixture.awayTeamName
-    cell.dateLabel.text = fixture.date
+    cell.dateLabel.text = fixture.date?.toDateString(inputDateFormat: "yyyy-MM-dd'T'HH:mm:ssZ", ouputDateFormat: "MMM d, yyyy")
+
     
     return cell
   }
@@ -70,4 +71,20 @@ class FixtureTableViewController: UITableViewController {
     return 170
   }
   
+  
+  
+  
+}
+
+
+extension String
+{
+  func toDateString( inputDateFormat inputFormat  : String,  ouputDateFormat outputFormat  : String ) -> String
+  {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = inputFormat
+    let date = dateFormatter.date(from: self)
+    dateFormatter.dateFormat = outputFormat
+    return dateFormatter.string(from: date!)
+  }
 }

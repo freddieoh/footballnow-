@@ -14,5 +14,4 @@ struct Fixture: Decodable {
   let homeTeamName: String?
   let awayTeamName: String?
   
-  
 }

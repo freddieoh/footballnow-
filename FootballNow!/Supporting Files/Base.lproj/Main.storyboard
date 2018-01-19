@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Team-->
         <scene sceneID="Wdf-oe-kpx">
             <objects>
                 <tableViewController id="jvX-GR-yE3" customClass="TeamsTableViewController" customModule="FootballNow_" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,13 +32,13 @@
                             <outlet property="delegate" destination="jvX-GR-yE3" id="fJL-mv-dRy"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="sP2-Be-c19"/>
+                    <tabBarItem key="tabBarItem" title="Team" id="sP2-Be-c19"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWu-DK-E9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1303" y="-383"/>
         </scene>
-        <!--Item-->
+        <!--League Table-->
         <scene sceneID="p4R-9b-2s3">
             <objects>
                 <tableViewController id="l2M-M5-kod" customClass="LeagueTableViewController" customModule="FootballNow_" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,13 +61,13 @@
                             <outlet property="delegate" destination="l2M-M5-kod" id="ija-hp-SDy"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="Q9Y-Bx-QR0"/>
+                    <tabBarItem key="tabBarItem" title="League Table" id="Q9Y-Bx-QR0"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFG-mr-mVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1302" y="344"/>
         </scene>
-        <!--Item-->
+        <!--Fixtures-->
         <scene sceneID="yix-EJ-2Z6">
             <objects>
                 <tableViewController id="w29-GR-qf6" customClass="FixtureTableViewController" customModule="FootballNow_" customModuleProvider="target" sceneMemberID="viewController">
@@ -90,11 +90,11 @@
                             <outlet property="delegate" destination="w29-GR-qf6" id="dO9-r5-Pmi"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="CME-hL-P7r"/>
+                    <tabBarItem key="tabBarItem" title="Fixtures" id="CME-hL-P7r"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aD-oz-VZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1302" y="1075"/>
+            <point key="canvasLocation" x="1025" y="1216"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ber-gd-9hs">
@@ -102,6 +102,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rq8-zm-lRu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aX4-Dk-KKq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>

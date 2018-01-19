@@ -1,5 +1,5 @@
 //
-//  FixturesResponse.swift
+//  ResultResponse.swift
 //  FootballNow!
 //
 //  Created by Fredrick Ohen on 1/18/18.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-struct FixturesResponse: Decodable {
-  let fixtures: [Fixture]
+struct ResultResponse: Decodable {
+  let results: [Result]
+  
 }
