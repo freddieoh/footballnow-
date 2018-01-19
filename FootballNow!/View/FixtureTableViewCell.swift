@@ -14,8 +14,11 @@ class FixtureTableViewCell: UITableViewCell {
   @IBOutlet weak var homeTeamLabel: UILabel!
   @IBOutlet weak var awayTeamLabel: UILabel!
   @IBOutlet weak var resultLabel: UILabel!
-
-    override func awakeFromNib() {
+  @IBOutlet weak var goalsHomeTeamLabel: UILabel!
+  @IBOutlet weak var goalsAwayTeamLabel: UILabel!
+  
+  
+  override func awakeFromNib() {
         super.awakeFromNib()
     }
 

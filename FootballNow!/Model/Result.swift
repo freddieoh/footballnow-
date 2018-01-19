@@ -9,6 +9,6 @@
 import Foundation
 
 struct Result: Decodable {
-  let goalsHomeTeam: String?
-  let goalsAwayTeam: String?
+  let goalsHomeTeam: Int?
+  let goalsAwayTeam: Int?
 }

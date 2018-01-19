@@ -27,6 +27,10 @@ class TeamsTableViewController: UITableViewController {
                        forCellReuseIdentifier: "TeamsCell")
   }
   
+  func styleTableView() {
+    tableView.separatorStyle = .singleLine
+  }
+  
   
   func retrieveTeamsFromApi() {
     let teamsURL = "http://api.football-data.org/v1/competitions/445/teams"

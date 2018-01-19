@@ -17,13 +17,17 @@ class LeagueTableViewController: UITableViewController {
     super.viewDidLoad()
     registerLeagueTableViewCellNib()
     fetchURL(url: "https://api.football-data.org/v1/competitions/445/leagueTable")
-    
+    styleTableView()
   }
   
   
   func registerLeagueTableViewCellNib() {
     tableView.register(UINib(nibName: "LeagueTableViewCell", bundle: nil), forCellReuseIdentifier: "LeagueCell")
   }
+  func styleTableView() {
+    tableView.separatorStyle = .singleLine
+  }
+  
   
   func fetchURL(url: String) {
     Alamofire.request(url).responseData { (response) in

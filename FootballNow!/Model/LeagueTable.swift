@@ -9,7 +9,6 @@
 import Foundation
 
 struct LeagueTable: Decodable {
- 
   let leagueCaption: String?
   let matchDay: Int?
   let standing: [Standing]
@@ -17,7 +16,6 @@ struct LeagueTable: Decodable {
 }
 
 struct Standing: Decodable {
-  
   let position: Int?
   let teamName: String?
   let crestURI: String?
@@ -29,6 +27,3 @@ struct Standing: Decodable {
   let losses: Int?
   
 }
-
-
-
