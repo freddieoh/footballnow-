@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class PlayerTableViewController: UITableViewController {
   
@@ -17,6 +18,7 @@ class PlayerTableViewController: UITableViewController {
     
     registerPlayerTableViewCellNib()
     
+    fetchURL(url: "http://api.football-data.org/v1/teams/57/players")
   }
   
   
@@ -24,7 +26,25 @@ class PlayerTableViewController: UITableViewController {
     tableView.register(UINib(nibName: "PlayerTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayerCell")
   }
   
+  func fetchURL(url: String) {
+    Alamofire.request(url).responseData { (response) in
+      guard let data = response.data else { return }
+      
+      do {
+          let decoder = JSONDecoder()
+          let player = try decoder.decode(Player.self, from: data)
+          let players = player.name
+        
   
+      }
+      catch {
+        print(error.localizedDescription)
+        
+      }
+      
+    
+  }
+  }
   // MARK: - Table view data source
   
   override func numberOfSections(in tableView: UITableView) -> Int {

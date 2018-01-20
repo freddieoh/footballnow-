@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Team {
+struct Team: Decodable {
   let name: String
   let code: String
   let shortName: String
@@ -23,28 +23,27 @@ enum SerializationError: Error {
 }
 
 extension Team {
-  
+
   init(json: [String:Any]) throws {
     guard let name = json["name"] as? String else {
       throw SerializationError.missing("name")
     }
-    
+
     guard let code = json["code"] as? String else {
       throw SerializationError.missing("code")
     }
-    
+
     guard let shortName = json["shortName"] as? String else {
       throw SerializationError.missing("shortName")
     }
-    
+
     guard let crestUrl = json["crestUrl"] as? String else {
       throw SerializationError.missing("crestUrl")
     }
-    
+
     self.name = name
     self.code = code
     self.shortName = shortName
     self.crestUrl = crestUrl
-    
-  }
+}
 }

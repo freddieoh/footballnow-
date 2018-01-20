@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class TeamsTableViewController: UITableViewController {
   
@@ -16,8 +17,7 @@ class TeamsTableViewController: UITableViewController {
     super.viewDidLoad()
     
     registerTeamsTableViewCellNib()
-    retrieveTeamsFromApi()
-    
+    fetchURL(url: "http://api.football-data.org/v1/competitions/445/teams")
   }
   
   func registerTeamsTableViewCellNib() {
@@ -31,44 +31,22 @@ class TeamsTableViewController: UITableViewController {
   }
   
   
-  func retrieveTeamsFromApi() {
-    let teamsURL = "http://api.football-data.org/v1/competitions/445/teams"
-    guard let url = URL(string: teamsURL) else { return }
-    let session = URLSession.shared
-    let task = session.dataTask(with: url) { (data, response, error) in
-      if let error = error {
-        DispatchQueue.main.async {
-          //make UI error Change
-          print(error.localizedDescription)
-        }
-        return
+  func fetchURL(url: String) {
+    Alamofire.request(url).responseData { (response) in
+      guard let data = response.data else { return }
+      let decoder = JSONDecoder()
+      do {
+        let teamResponse = try decoder.decode(TeamResponse.self, from: data)
+        self.teams = teamResponse.teams
+        
       }
-      
-      guard let data = data else { return }
-      guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-        DispatchQueue.main.async {
-          // Make UI error Change
-        }
-        return
+      catch {
+        print(error.localizedDescription)
       }
-      
-      let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
-      guard let jsonTeams = json["teams"] as? [[String:Any]] else { return }
-      for team in jsonTeams  {
-        do {
-          let team = try Team(json: team)
-          self.teams.append(team)
-        } catch let error {
-          print(error.localizedDescription)
-        }
-      }
-      DispatchQueue.main.async {
-        self.tableView.reloadData()
-      }
+      self.tableView.reloadData()
     }
-    task.resume()
   }
-  
+
   // MARK: - Table view data source
   
   override func numberOfSections(in tableView: UITableView) -> Int {

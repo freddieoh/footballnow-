@@ -32,11 +32,11 @@ class FixtureTableViewController: UITableViewController {
   func fetchURL(url: String) {
     Alamofire.request(url).responseData { (response) in
       guard let data = response.data else { return }
+      let decoder = JSONDecoder()
       do {
-        let decoder = JSONDecoder()
         let fixtureResponse = try decoder.decode(FixturesResponse.self, from: data)
         let results = fixtureResponse.fixtures.map { $0.result }
-        print(results)
+        print(results.count)
         self.fixtures = fixtureResponse.fixtures
       }
       catch {
