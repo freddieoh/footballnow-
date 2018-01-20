@@ -11,8 +11,7 @@ import UIKit
 class TeamsTableViewController: UITableViewController {
   
   var teams: [Team] = []
-  
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     

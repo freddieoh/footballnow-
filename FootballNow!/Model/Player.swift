@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Player {
+struct Player: Decodable {
   let name: String
   let position: String
   let jerseyNumber: Int
