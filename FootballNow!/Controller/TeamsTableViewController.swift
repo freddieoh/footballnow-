@@ -11,7 +11,7 @@ import UIKit
 class TeamsTableViewController: UITableViewController {
   
   var teams: [Team] = []
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -105,7 +105,20 @@ class TeamsTableViewController: UITableViewController {
     return cell
   }
   
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    self.performSegue(withIdentifier: "PlayerSegue", sender: nil)
+  }
+  
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 292
+  }
+  
+  // MARK: Navigation
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "PlayerSegue" {
+      let destination = segue.destination as? PlayerTableViewController
+      
+    }
   }
 }

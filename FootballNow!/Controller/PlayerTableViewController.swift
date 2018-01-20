@@ -10,6 +10,7 @@ import UIKit
 
 class PlayerTableViewController: UITableViewController {
   
+  var players: [Player] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -44,7 +45,7 @@ class PlayerTableViewController: UITableViewController {
     
   }
   
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 180
   }
   
