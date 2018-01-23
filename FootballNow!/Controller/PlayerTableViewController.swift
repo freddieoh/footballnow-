@@ -11,7 +11,7 @@ import Alamofire
 
 class PlayerTableViewController: UITableViewController {
   
-  var players: [Player] = []
+  var playerArray: [Player] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,18 +32,15 @@ class PlayerTableViewController: UITableViewController {
       
       do {
         let decoder = JSONDecoder()
-        let player = try decoder.decode(Player.self, from: data)
-        let players = player.name
-        print(players.count)
-        
+        let playerResponse = try decoder.decode(PlayerResponse.self, from: data)
+        self.playerArray = playerResponse.players
         
       }
       catch {
         print(error.localizedDescription)
         
       }
-      
-      
+      self.tableView.reloadData()
     }
   }
   // MARK: - Table view data source
@@ -53,7 +50,7 @@ class PlayerTableViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
+    return playerArray.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,6 +58,14 @@ class PlayerTableViewController: UITableViewController {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PlayerTableViewCell  else {
       fatalError("The dequeued cell is not an instance of PlayerCell.")
     }
+    
+    let player = playerArray[indexPath.row]
+    cell.nameLabel.text = player.name
+    cell.positionLabel.text = player.position
+    cell.dateOfBirthLabel.text = player.dateOfBirth
+    cell.jerseyNumberLabel.text = player.jerseyNumber?.description
+    cell.nationalityLabel.text = player.nationality
+    
     
     return cell
     

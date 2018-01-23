@@ -32,6 +32,7 @@
 		1FBCBF391FD5E9CB0000AD57 /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCBF371FD5E9CB0000AD57 /* TeamsTableViewCell.swift */; };
 		1FBCBF3A1FD5E9CB0000AD57 /* TeamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FBCBF381FD5E9CB0000AD57 /* TeamsTableViewCell.xib */; };
 		1FBCBF3C1FD5E9F60000AD57 /* TeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCBF3B1FD5E9F60000AD57 /* TeamsTableViewController.swift */; };
+		1FCEDE702017960E0020FDA4 /* PlayerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCEDE6F2017960E0020FDA4 /* PlayerResponse.swift */; };
 		3DF59A8653DC6888CF7F70DF /* Pods_FootballNow_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE848B39DF81BFC2657DB374 /* Pods_FootballNow_Tests.framework */; };
 		90ACE31A2B0AA16EE4327819 /* Pods_FootballNow_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 485412F6BF7E76CD3CADEB51 /* Pods_FootballNow_.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,7 @@
 		1FBCBF371FD5E9CB0000AD57 /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
 		1FBCBF381FD5E9CB0000AD57 /* TeamsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsTableViewCell.xib; sourceTree = "<group>"; };
 		1FBCBF3B1FD5E9F60000AD57 /* TeamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewController.swift; sourceTree = "<group>"; };
+		1FCEDE6F2017960E0020FDA4 /* PlayerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerResponse.swift; sourceTree = "<group>"; };
 		1FF318A71FE1B201003C2C6D /* FootballNow!-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FootballNow!-Bridging-Header.h"; sourceTree = "<group>"; };
 		212A9EC1D3C678BB5085E768 /* Pods-FootballNow!Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballNow!Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootballNow!Tests/Pods-FootballNow!Tests.release.xcconfig"; sourceTree = "<group>"; };
 		485412F6BF7E76CD3CADEB51 /* Pods_FootballNow_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootballNow_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +156,7 @@
 				1F470B011FFEA03100ED3650 /* Player.swift */,
 				1FAD0A681FFEC4A5001274F5 /* Fixture.swift */,
 				1F7B86B920115A300081B7B5 /* Result.swift */,
+				1FCEDE6F2017960E0020FDA4 /* PlayerResponse.swift */,
 				1F7B86B5201144A40081B7B5 /* FixturesResponse.swift */,
 				1F78699B2013E9F9007CC8A3 /* TeamResponse.swift */,
 			);
@@ -429,6 +432,7 @@
 			files = (
 				1FAD0A641FFEB222001274F5 /* PlayerTableViewCell.swift in Sources */,
 				1F7B86B6201144A40081B7B5 /* FixturesResponse.swift in Sources */,
+				1FCEDE702017960E0020FDA4 /* PlayerResponse.swift in Sources */,
 				1FBCBF301FD5E3D20000AD57 /* Team.swift in Sources */,
 				1F78699C2013E9F9007CC8A3 /* TeamResponse.swift in Sources */,
 				1FBCBF101FD5E3A20000AD57 /* AppDelegate.swift in Sources */,

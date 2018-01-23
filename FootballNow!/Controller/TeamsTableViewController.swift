@@ -38,7 +38,6 @@ class TeamsTableViewController: UITableViewController {
       do {
         let teamResponse = try decoder.decode(TeamResponse.self, from: data)
         self.teams = teamResponse.teams
-        
       }
       catch {
         print(error.localizedDescription)
