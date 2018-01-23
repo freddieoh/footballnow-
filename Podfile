@@ -7,7 +7,6 @@ target 'FootballNow!' do
 source 'https://github.com/CocoaPods/Specs.git'
 
   # Pods for FootballNow!
-	pod 'SDWebImage'
 	pod 'Alamofire', '~> 4.5'
 
 

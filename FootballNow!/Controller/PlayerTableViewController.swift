@@ -31,19 +31,20 @@ class PlayerTableViewController: UITableViewController {
       guard let data = response.data else { return }
       
       do {
-          let decoder = JSONDecoder()
-          let player = try decoder.decode(Player.self, from: data)
-          let players = player.name
+        let decoder = JSONDecoder()
+        let player = try decoder.decode(Player.self, from: data)
+        let players = player.name
+        print(players.count)
         
-  
+        
       }
       catch {
         print(error.localizedDescription)
         
       }
       
-    
-  }
+      
+    }
   }
   // MARK: - Table view data source
   
