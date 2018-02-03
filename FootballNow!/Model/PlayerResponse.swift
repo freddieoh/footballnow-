@@ -9,5 +9,5 @@
 import Foundation
 
 struct PlayerResponse: Decodable {
-  let players: [Player]
+    let players: [Player]
 }

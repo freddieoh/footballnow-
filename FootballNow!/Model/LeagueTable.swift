@@ -9,21 +9,21 @@
 import Foundation
 
 struct LeagueTable: Decodable {
-  let leagueCaption: String?
-  let matchDay: Int?
-  let standing: [Standing]
-
+    let leagueCaption: String?
+    let matchDay: Int?
+    let standing: [Standing]
+    
 }
 
 struct Standing: Decodable {
-  let position: Int?
-  let teamName: String?
-  let crestURI: String?
-  let playedGames: Int?
-  let points: Int?
-  let goals: Int?
-  let wins: Int?
-  let draws: Int?
-  let losses: Int?
-  
+    let position: Int?
+    let teamName: String?
+    let crestURI: String?
+    let playedGames: Int?
+    let points: Int?
+    let goals: Int?
+    let wins: Int?
+    let draws: Int?
+    let losses: Int?
+    
 }

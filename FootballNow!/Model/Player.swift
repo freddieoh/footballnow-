@@ -9,9 +9,9 @@
 import Foundation
 
 struct Player: Decodable {
-  let name: String?
-  let position: String?
-  let jerseyNumber: Int?
-  let dateOfBirth: String?
-  let nationality: String?
+    let name: String?
+    let position: String?
+    let jerseyNumber: Int?
+    let dateOfBirth: String?
+    let nationality: String?
 }

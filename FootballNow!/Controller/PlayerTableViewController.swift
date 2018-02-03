@@ -10,69 +10,67 @@ import UIKit
 import Alamofire
 
 class PlayerTableViewController: UITableViewController {
-  
-  var playerArray: [Player] = []
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
     
-    registerPlayerTableViewCellNib()
+    var playerArray: [Player] = []
     
-    fetchURL(url: "http://api.football-data.org/v1/teams/57/players")
-  }
-  
-  
-  func registerPlayerTableViewCellNib() {
-    tableView.register(UINib(nibName: "PlayerTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayerCell")
-  }
-  
-  func fetchURL(url: String) {
-    Alamofire.request(url).responseData { (response) in
-      guard let data = response.data else { return }
-      
-      do {
-        let decoder = JSONDecoder()
-        let playerResponse = try decoder.decode(PlayerResponse.self, from: data)
-        self.playerArray = playerResponse.players
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-      }
-      catch {
-        print(error.localizedDescription)
+        registerPlayerTableViewCellNib()
         
-      }
-      self.tableView.reloadData()
-    }
-  }
-  // MARK: - Table view data source
-  
-  override func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
-  }
-  
-  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return playerArray.count
-  }
-  
-  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cellIdentifier = "PlayerCell"
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PlayerTableViewCell  else {
-      fatalError("The dequeued cell is not an instance of PlayerCell.")
+        fetchURL(url: "http://api.football-data.org/v1/teams/57/players")
     }
     
-    let player = playerArray[indexPath.row]
-    cell.nameLabel.text = player.name
-    cell.positionLabel.text = player.position
-    cell.dateOfBirthLabel.text = player.dateOfBirth
-    cell.jerseyNumberLabel.text = player.jerseyNumber?.description
-    cell.nationalityLabel.text = player.nationality
     
+    func registerPlayerTableViewCellNib() {
+        tableView.register(UINib(nibName: "PlayerTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayerCell")
+    }
     
-    return cell
+    func fetchURL(url: String) {
+        Alamofire.request(url).responseData { (response) in
+            guard let data = response.data else { return }
+            
+            do {
+                let decoder = JSONDecoder()
+                let playerResponse = try decoder.decode(PlayerResponse.self, from: data)
+                self.playerArray = playerResponse.players
+                
+            }
+            catch {
+                print(error.localizedDescription)
+                
+            }
+            self.tableView.reloadData()
+        }
+    }
+    // MARK: - Table view data source
     
-  }
-  
-  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 180
-  }
-  
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return playerArray.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "PlayerCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PlayerTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of PlayerCell.")
+        }
+        
+        let player = playerArray[indexPath.row]
+        cell.nameLabel.text = player.name
+        cell.positionLabel.text = player.position
+        cell.dateOfBirthLabel.text = player.dateOfBirth
+        cell.jerseyNumberLabel.text = player.jerseyNumber?.description
+        cell.nationalityLabel.text = player.nationality
+        
+        return cell
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180
+    }
 }

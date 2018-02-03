@@ -9,8 +9,8 @@
 import Foundation
 
 struct Fixture: Decodable {
-  let date: String?
-  let homeTeamName: String?
-  let awayTeamName: String?
-  let result: Result
+    let date: String?
+    let homeTeamName: String?
+    let awayTeamName: String?
+    let result: Result
 }
