@@ -13,37 +13,15 @@ struct Team: Decodable {
     let code: String
     let shortName: String
     let crestUrl: String
+    let links: Link
     
-}
-
-enum SerializationError: Error {
-    case missing(String)
-    case invalid(String, Any)
-    
-}
-
-extension Team {
-    
-    init(json: [String:Any]) throws {
-        guard let name = json["name"] as? String else {
-            throw SerializationError.missing("name")
-        }
-        
-        guard let code = json["code"] as? String else {
-            throw SerializationError.missing("code")
-        }
-        
-        guard let shortName = json["shortName"] as? String else {
-            throw SerializationError.missing("shortName")
-        }
-        
-        guard let crestUrl = json["crestUrl"] as? String else {
-            throw SerializationError.missing("crestUrl")
-        }
-        
-        self.name = name
-        self.code = code
-        self.shortName = shortName
-        self.crestUrl = crestUrl
+    enum CodingKeys: String, CodingKey {
+        case name
+        case code
+        case shortName
+        case crestUrl
+        case links = "_links"
     }
+    
 }
+
